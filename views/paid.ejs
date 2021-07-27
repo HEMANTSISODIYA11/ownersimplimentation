@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Orders</title>
+</head>
+<%orders.forEach(function(order){%>
+    <h1>
+        <%=order._id%>
+    </h1>
+    <p>Amount:-
+        <%=order.billAmount%>
+    </p>
+
+    <%order.orderItems.forEach(function(orderitem){%>
+        <p><b>Item:-<%=orderitem.name%>    </b> <i>quantity:-<%=orderitem.quantity%></i></p>
+
+        <%})%>
+            <a href="http://localhost:5000/completed/<%=order._id%>">Completed</a>
+            <%})%>
+
+                <body>
+
+                </body>
+
+</html>

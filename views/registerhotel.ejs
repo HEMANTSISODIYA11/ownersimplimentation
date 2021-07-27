@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<style>
+    /*add full-width input fields*/
+    
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* set a style for all buttons*/
+    
+    button {
+        background-color: Green;
+        color: white;
+        padding: 15px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 100%;
+    }
+    /*set styles for the cancel button*/
+    
+    .cancelbtn {
+        padding: 15px 20px;
+        background-color: #FF2E00;
+    }
+    /*float cancel and signup buttons and add an equal width*/
+    
+    .cancelbtn,
+    .signupbtn {
+        float: left;
+        width: 50%;
+    }
+    /*add padding to container elements*/
+    
+    .container {
+        padding: 16px;
+    }
+    /*clear floats*/
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /*styles for cancel button and signup button 
+    on extra small screens*/
+    
+    @media screen and (max-width: 300px) {
+        .cancelbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    }
+    
+    .button {
+        background-color: #1c87c9;
+        border: none;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <h2>Signup Form</h2>
+    <!--Step 1:Adding HTML-->
+    <form action="/registerhotel" style="border:1px solid #ccc" method="POST">
+        <div class="container">
+            <label><b>HotelName</b></label>
+            <input type="text" placeholder="Enter Username" name="name" required autocomplete>
+
+            <label><b>Description</b></label>
+            <input type="text" placeholder="Write Some Catchy words for your hotel" name="description" required autocomplete>
+
+            <label><b>Timing</b></label>
+            <input type="text" placeholder="Format- xx am to xx pm" name="timing" required autocomplete>
+
+            <label><b>phone</b></label>
+            <input type="text" placeholder="Your Hotel phone Number" name="phone" required autocomplete>
+
+            <label><b>Type</b></label>
+            <input type="text" placeholder="veg/nonveg" name="Type" required autocomplete>
+
+
+            <div class="clearfix">
+                <button type="submit" class="signupbtn">Register</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

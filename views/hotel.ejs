@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>finale</title>
+    <style>
+        .button {
+            background-color: #1c87c9;
+            border: none;
+            color: white;
+            padding: 20px 34px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/additem" class="button">Add Item</a>
+    <a href="/orders" class="button">See Your orders</a>
+    <a href="/edithotel/<%=user.hotelId%>" class="button">Edit Hotel Detail</a>
+    <a href="/editprofile" class="button">Edit Profile</a>
+    <a href="/itemlist" class="button">Your Item List</a>
+    <a href="/changehotelstatus/<%=user.hotelId%>" class="button">
+        <%if(hotel.status === true){%>
+            <b>open</b>
+            <%    }else{ %>
+                <b>closed</b>
+                <% } %>
+    </a>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Items Page</title>
+
+    <style>
+        .button {
+            background-color: #1c87c9;
+            border: none;
+            color: white;
+            padding: 20px 34px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+        <%  items.forEach(function(element){  %>
+            <h2>
+                <%=element.name%>
+            </h2>
+            <p><b>Price:-</b>
+                <%=element.price%>
+            </p>
+            <p><b>Tags:-</b>
+                <%=element.tag%>
+            </p>
+            <p><b>availiable:-</b>
+                <%=element.availableis%>
+            </p>
+            <p><b>Type:-<%=element.Type%></b></p>
+            <a href="/edititem/<%=element._id%>" class="button">EditItem</a>
+            <a href="/changestatus/<%=element._id%>" class="button">Change Availibility</a>
+
+            <!-- weather item is available or not -->
+            <!-- a delete option should for owner -->
+            <% })%>
+
+    </div>
+
+</body>
+
+</html>

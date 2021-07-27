@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Orders</title>
+</head>
+<%orders.forEach(function(order){%>
+    <h1>
+        <%=order._id%>
+    </h1>
+    <p>Amount:-
+        <%=order.billAmount%>
+    </p>
+
+    <%order.orderItems.forEach(function(orderitem){%>
+        <p><b>Item:-<%=orderitem.name%>    </b> <i>quantity:-<%=orderitem.quantity%></i></p>
+
+        <%})%>
+            <a href="http://localhost:5000/confirm/<%=order._id%>">Confirm</a>
+            <a href="http://localhost:5000/Decline/<%=order._id%>">Decline</a>
+            <%})%>
+
+                <body>
+
+                </body>
+
+</html>

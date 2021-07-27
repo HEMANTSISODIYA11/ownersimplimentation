@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<style>
+    /*set border to the form*/
+    
+    form {
+        border: 3px solid #f1f1f1;
+    }
+    /*assign full width inputs*/
+    
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    /*set a style for the buttons*/
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .container {
+        padding: 16px;
+    }
+    /*set the forgot password text*/
+    
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+    /*set styles for span and cancel button on small screens*/
+    
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+    
+    .button {
+        background-color: #1c87c9;
+        border: none;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <h2>Login Form</h2>
+    <!--Step 1 : Adding HTML-->
+    <form action="/login" method="POST">
+
+        <div class="container">
+            <label><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Login</button>
+
+        </div>
+
+    </form>
+    <a href="/auth/google" class="button">Sign In with Google</a>
+    <a href="/auth/facebook" class="button">Sign In with Facebook</a>
+</body>
+
+</html>
